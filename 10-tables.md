@@ -1,4 +1,4 @@
-LaTeX tables - Tutorial with code examples
+## LaTeX tables - Tutorial with code examples
 Learn to create tables in LaTeX including all features such as multi row, multi column, multi page and landscape tables. All in one place.
 
 
@@ -16,7 +16,8 @@ Combining multirow and multicolumn
 Prettier tables with booktabs
 Tables spanning multiple pages
 Landscape / sideways tables
-Tables from Excel (.csv) to LaTeX
+
+### Tables from Excel (.csv) to LaTeX
 In this tutorial we're going to learn how to use the table and tabular environments to create tables in LaTeX. At first we're going to create a simple table like this:
 
 table-1.png
@@ -38,7 +39,7 @@ Tables in LaTeX can be created through a combination of the table environment an
 The tabular environment uses ampersands & as column seperators and newline symbols \\ as row seperators. The vertical lines separating the columns of our table (|) are passed as an argument to the tabular environment (e.g.\begin{tabular}{l|c|r} ) and the letters tell whether we want to align the content to the left (l), to the center (c) or to the right (r) for each column. There should be one letter for every column and a vertical line in between them or in front of them, if we want a vertical line to be shown in the table. Row seperators can be added with the \hline command.
 
 Now let's take a look at some actual code for a basic table, which you can easily copy-and-paste into your document and modify it to your needs.
-
+<pre><code>
 \documentclass{article}
 
 \begin{document}
@@ -59,6 +60,7 @@ Now let's take a look at some actual code for a basic table, which you can easil
 \end{table}
 
 \end{document}
+</code></pre>
 The above code will print out the table which I've already shown you in the introduction and it looks like this:
 
 table-1.png
@@ -68,7 +70,7 @@ While this table already works, it's not very satisfying and readable that the n
 Align numbers at decimal point
 
 The first thing we have to do is to include the siunitx package in our preamble and use the command \sisetup to tell the package how many digital places it should display:
-
+<pre><code>
 %...
 
 \usepackage{siunitx} % Required for alignment
@@ -81,8 +83,9 @@ The first thing we have to do is to include the siunitx package in our preamble 
 \begin{document} 
 
 %...
+</code></pre>
 Afterwards we can use a new alignment setting in our tables, so besides left (l), center (c) and right (r), there's now an additional setting S, which will align the numbers automagically. In our previous table, there was an alignment problem with the middle column, so I've now changed the alignment setting of the middle column from (c) to (S):
-
+<pre><code>
 %...
 
 \begin{table}[h!]
@@ -101,6 +104,7 @@ Afterwards we can use a new alignment setting in our tables, so besides left (l)
 \end{table}
 
 %...
+</code></pre>
 We can now observe, that LaTeX will now properly align the numbers at their decimal points and round the numbers to two decimal places:
 
 table-2.png
@@ -135,7 +139,7 @@ This will generate the following output:
 table-3.png
 
 Adding an additional column is also possible, but you have to be careful, because you have to add a column separator (&) to every column:
-
+<pre><code>
 %...
 
 \begin{table}[h!]
@@ -154,6 +158,7 @@ Adding an additional column is also possible, but you have to be careful, becaus
 \end{table}
 
 %...
+</code></pre>
 We will now see an additional column in our output:
 
 table-4.png
@@ -181,7 +186,7 @@ In order for a cell to span multiple rows, we have to use the multirow command. 
 I usually use an asterisk (*) as a parameter for the width, since this basically means, that the width should be determined automatically.
 
 Because we're combining two rows in our example, it's necessary to omit the content of the same row in the following line. Let's look at how the actual LaTeX code would look like:
-
+<pre><code>
 %...
 
 \begin{table}[h!]
@@ -202,6 +207,7 @@ Because we're combining two rows in our example, it's necessary to omit the cont
 \end{table}
 
 %...
+</code></pre>
 The modified table looks like this:
 
 table-5.png
