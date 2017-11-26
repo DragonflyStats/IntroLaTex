@@ -4,7 +4,6 @@ Learn to typeset and align equations, matrices and fractions in LaTeX. Overview 
 
 
  
-[Open document online]
 
 * Inline math
 * Equations
