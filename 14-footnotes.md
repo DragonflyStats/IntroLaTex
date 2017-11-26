@@ -1,4 +1,5 @@
 LaTeX Footnotes - Quick Explanation
+==============================
 Learn how to create footnotes in LaTeX and how to refer to them, using the builtin commands footnote, label and ref.
 
 
@@ -16,7 +17,7 @@ After compilation you will see the footnote appearing on the bottom of your page
 ...
 I'm referring to footnote \ref{myfootnote}.
 ...
-Summary
+### Summary
 
 Create footnotes with the \footnote command and label them with \label
 Make sure that the label is contained within the braces of the footnote command
