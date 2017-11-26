@@ -32,22 +32,28 @@ The code above will create the following pdf:
 
 boat.png
 
-The figure environment takes care of the numbering and positioning of the image within the document. In order to include a figure, you must use the \includegraphics command. It takes the image width as an option in brackets and the path to your image file. As you can see, I put \linewidth into the brackets, which means the picture will be scaled to fit the width of the document. As a result smaller pictures are upscaled and larger pictures downscaled respectively. As I mentioned before the brackets contain the path to the image. In this case the image is stored in the same directory as my .tex file, so I simply put boat.jpg here to include it. For large documents, you probably want to store image files in a different folder, say we created a folder images, then we would simply write images/boat.jpg into the braces. In the next command we set a \caption, which is the text shown below the image and a \label which is invisible, but useful if we want to refer to our figure in our document. You can use the \ref command to refer to the figure (marked by label) in your text and it will then be replaced by the correct number. LaTeX is smart enough to retrieve the correct numbers for all your images automatically. Note that you will need to include the graphicx package in order to use this code.
+The figure environment takes care of the numbering and positioning of the image within the document. In order to include a figure, you must use the \includegraphics command. It takes the image width as an option in brackets and the path to your image file. As you can see, I put \linewidth into the brackets, which means the picture will be scaled to fit the width of the document. 
+
+As a result smaller pictures are upscaled and larger pictures downscaled respectively. As I mentioned before the brackets contain the path to the image. In this case the image is stored in the same directory as my .tex file, so I simply put boat.jpg here to include it. For large documents, you probably want to store image files in a different folder, say we created a folder images, then we would simply write images/boat.jpg into the braces. 
+
+In the next command we set a \caption, which is the text shown below the image and a \label which is invisible, but useful if we want to refer to our figure in our document. You can use the \ref command to refer to the figure (marked by label) in your text and it will then be replaced by the correct number. LaTeX is smart enough to retrieve the correct numbers for all your images automatically. Note that you will need to include the graphicx package in order to use this code.
 
 ### Image positioning / setting the float
 
 At some point, you will notice that the figure doesn't necessarily show up in the exact place as you put your code in the .tex file. If your document contains a lot of text, it's possible that LaTeX will put the picture on the next page, or any other page where it finds sufficient space. To prevent this behavior, it's necessary to set the float value for the figure environment.
-
+<pre><code>
 %...
 \begin{figure}[h!]
 %...
+</code></pre>
 Setting the float by adding [h!] behind the figure environment \begin tag will force the figure to be shown at the location in the document. Possible values are:
 
-h (here) - same location
-t (top) - top of page
-b (bottom) - bottom of page
-p (page) - on an extra page
-! (override) - will force the specified location
+* h (here) - same location
+* t (top) - top of page
+* b (bottom) - bottom of page
+* p (page) - on an extra page
+* ! (override) - will force the specified location
+
 However, I have only used the [h!] option so far. The float package (\usepackage{float}) allows to set the option to [H], which is even stricter than [h!].
 
 ### Multiple images / subfigures in LaTeX
@@ -72,6 +78,7 @@ First you need to add the subcaption package to your preamble:
 </code></pre>
 Next, you need to add multiple subfigure environments within a figure environment.
 
+<pre><code>
 %...
 
 \begin{figure}[h!]
@@ -89,9 +96,10 @@ Next, you need to add multiple subfigure environments within a figure environmen
 \end{figure}
 
 %...
+</code></pre>
 This will show two pictures next to each other in your document, like this:
 
-Example for subfigures in latex
+### Example for subfigures in latex
 
 If you look closely, you will see, that I've set the width of the image manually:
 
@@ -130,9 +138,9 @@ Another example of subfigures in latex
 
 ### Summary
 
-Use the graphicx package and figure environment to embed pictures
-Pictures will be numbered automatically
-Change the width of your image by using \includegraphics[width=\linewidth]{}
-Refer to pictures in your document by setting a \label and using the \ref tag
-Set the position of your image by adding a float option such as [h!]
-If you want to show multiple figures next to each other, use the subcaption package and the subfigure environment
+* Use the graphicx package and figure environment to embed pictures
+* Pictures will be numbered automatically
+* Change the width of your image by using \includegraphics[width=\linewidth]{}
+* Refer to pictures in your document by setting a \label and using the \ref tag
+* Set the position of your image by adding a float option such as [h!]
+* If you want to show multiple figures next to each other, use the subcaption package and the subfigure environment
