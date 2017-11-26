@@ -1,4 +1,5 @@
 Your first LaTeX document
+=============================================================
 Demonstration of how to create a basic LaTeX document and title page using LaTeX. The basic file layout explained.
 
 
@@ -12,7 +13,7 @@ This tutorial assumes that you have chosen and installed an editor. If not you c
 
 You will find a link like this in all of the following lessons.
 
-The basic layout of a LaTeX file
+### The basic layout of a LaTeX file
 
 Creating documents with LaTeX is simple and fun. In contrast to Word, you start off with a plain text file (.tex file) which contains LaTeX code and the actual content (i.e. text). LaTeX uses control statements, which define how your content should be formatted. Before you can see what the final result looks like, the LaTeX compiler will take your .tex file and compile it into a .pdf file. A basic example document can be created with the following code:
 
@@ -33,7 +34,7 @@ Most of the time, the commands are pretty self-explanatory: \documentclass{artic
 LaTeX uses document classes, to influence the overall layout of your document. For instance, there's one class to layout articles, one class to layout books (called book) and many more, which we probably don't need. In my tutorials, I will always use the class article. Feel free to play around and try different document classes anyway and see what happens!
 
 This second example differs slightly from the first one, since this command involves a \begin and \end statement. In fact this is not a command, but defines an environment. An environment is simply an area of your document where certain typesetting rules apply. It is possible (and usually necessary) to have multiple environments in a document, but it is imperative the document environment is the topmost environment. The following code shows how environments can be used:
-
+<pre><code>
 % Valid:
 
 \begin{document}
@@ -42,7 +43,8 @@ This second example differs slightly from the first one, since this command invo
     \end{environment2}
   \end{environment1}
 \end{document}
-
+</code></pre>
+<pre><code>
 %Invalid:
 
 \begin{document}
@@ -51,7 +53,7 @@ This second example differs slightly from the first one, since this command invo
   \end{environment1}
     \end{environment2}
 \end{document}
-
+</code></pre>
 % Invalid:
 
 \begin{document}
@@ -70,7 +72,7 @@ Adding a title page
 There are numerous choices for environments and you will most likely need them as soon as you introduce large parts of mathematics or figures to your document. While it is possible to define your own environments, it is very likely that the environment you desire already exists. LaTeX already comes with a few predefined environments and even more come in so called packages, which are subject to another lesson later on.
 
 Let's try out a few more commands to make our document more interesting:
-
+<pre><code>
 \documentclass{article}
 
 \title{My first document}
@@ -83,9 +85,13 @@ Let's try out a few more commands to make our document more interesting:
 
   Hello World!
 \end{document}
+</code></pre>
 Obviously the statements \title, \date and \author are not within the the document environment, so they will not directly show up in our document. The area before our main document is called preamble. In this specific example we use it to set up the values for the \maketitle command for later use in our document. This command will automagically create a titlepage for us. The \newpage command speaks for itself.
 
-If we now compile again, we will see a nicely formatted title page, but we can spot a page number at the bottom of our title page. What if we decide, that actually, we don't want to have that page number showing up there. We can remove it, by telling LaTeX to hide the page number for our first page. This can be done by adding the \pagenumbering{gobble} command and then changing it back to \pagenumbering{arabic} on the next page numbers like so:
+If we now compile again, we will see a nicely formatted title page, but 
+we can spot a page number at the bottom of our title page. What if we decide, that actually, we don't want to 
+have that page number showing up there. We can remove it, by telling LaTeX to hide the page number for our first page. 
+This can be done by adding the **\pagenumbering{gobble}** command and then changing it back to **\pagenumbering{arabic}** on the next page numbers like so:
 
 \documentclass{article}
 
