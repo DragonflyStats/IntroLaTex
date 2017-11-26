@@ -58,18 +58,6 @@ The most useful math envorinments are the equation environment for typesetting s
 \end{document}
 </code></pre>
 Output Equation:
- 1
-+
-2
-=
-3
-1+2=3
- 1
-=
-3
-−
-2
-1=3−2
 
 Output Align:
  1
@@ -99,34 +87,7 @@ The align environment will align the equations at the ampersand &. Single equati
 \end{align*}
 
 \end{document}
-Output:
- f
-(
-x
-)
-=
-x
-2
-g
-(
-x
-)
-=
-1
-x
-F
-(
-x
-)
-=
-∫
-a
-b
-1
-3
-x
-3
-f(x)=x2g(x)=1xF(x)=∫ba13x3
+
 </code></pre>
 It is also possible to combine various commands to create more sophisticated expressions such as:
 
@@ -141,18 +102,20 @@ The more complex the expression, the more error prone this is, it's important to
 ### Matrices
 
 Furthermore it's possible to display matrices in LaTeX. There is a special matrix environment for this purpose, please keep in mind that the matrices only work within math environments as described above:
-
+<pre><code>
 \begin{matrix}
 1 & 0\\
 0 & 1
 \end{matrix}
+</code></pre>
 Output: 
 1
 0
 0
 1
 1001
-Brackets in math mode - Scaling
+
+### Brackets in math mode - Scaling
 
 To surround the matrix by brackets, it's necessary to use special statements, because the plain [ ] symbols do not scale as the matrix grows. The following code will result in wrong brackets:
 
@@ -207,8 +170,9 @@ Single formulas must be seperated with two backslashes \\
 Use the matrix environment to typeset matrices
 Scale parentheses with \left( \right) automatically
 All mathematical expressions have a unique command with unique syntax
+
 Notable examples are:
-\int^a_b for integral symbol
-\frac{u}{v} for fractions
-\sqrt{x} for square roots
+* \int^a_b for integral symbol
+* \frac{u}{v} for fractions
+* \sqrt{x} for square roots
 Characters for the greek alphabet and other mathematical symbols such as \lambda
