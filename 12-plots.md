@@ -1,19 +1,21 @@
 Plots in LaTeX - Visualize data with pgfplots
+==============================================
+
 The pgfplots package from tikz/pgf enabled you to plot data directly from .csv files in LaTeX.
 
 
-
- 
 [Open document online]
 
-Basic plotting
-Packages and setup
+* Basic plotting
+* Packages and setup
+
 Visualizing your data is easily done with auto-generated plots using the pgfplots package. It's strongly recommended to read Lesson 9 before, since I will omit some basic statements about .csv files and basically use the same file for my plot.
 
-Basic plotting
+## Basic plotting
 
 To plot our data, we will use the following code:
 
+<pre><code>
 \documentclass{article}
 
 \usepackage{siunitx}
@@ -56,14 +58,16 @@ To plot our data, we will use the following code:
 \end{figure}
 
 \end{document}
+</code></pre>
 This plot will show up in our .pdf file after compilation:
 
 Image
 
-Packages and setup
+### Packages and setup
 
 We added the new packages and the following code to generate the plot:
 
+<pre><code>
 ...
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -96,13 +100,19 @@ We added the new packages and the following code to generate the plot:
   \end{center}
 \end{figure}
 ...
-The first part only includes the necessary packages, the second part has only two commands as well, where \pgfplotsset{compat=newest} disables the backward compatibility for pgfplots, so we can place the legend of our graph below the plot and \usepgfplotslibrary{units} adds two new commands (x unit and y unit), which allows for nice formatting of units in brackets. Most parts from the last part should be self-explanatory. We have width, xlabel, ylabel and more. You should comment them out and explore them on your own.
+</code></pre>
+
+The first part only includes the necessary packages, the second part has only two commands as well, where \pgfplotsset{compat=newest} disables the backward compatibility for pgfplots, so we can place the legend of our graph below the plot and \usepgfplotslibrary{units} adds two new commands (x unit and y unit), which allows for nice formatting of units in brackets. 
+
+Most parts from the last part should be self-explanatory. We have width, xlabel, ylabel and more. You should comment them out and explore them on your own.
 
 The most important part is:
 
+<pre><code>
 ...
         table[x=column 1,y=column 2,col sep=comma] {table.csv};
 ...
+</code></pre>
 Given a .csv file like:
 
 column 1,column 2
@@ -110,7 +120,7 @@ column 1,column 2
 11.432,2342.23123123
 we have to put the name of one column for our x, in this case x=column 1 and a second column for our y, since there are only two columns, we choose y=column 2. Again, the col sep=comma indicates that we use comma as our column separator. We can copy the whole snippet as shown above and use it over and over again, we only have to change the columns we want to plot and the filename. There are a lot of options to style the plots and have bar charts and so forth. I will show a few more styles in a later tutorial or add an overview of snippets to the misc section.
 
-Summary
+### Summary
 
-Plotting is easy with pgfplots, it plots data directly from .csv files
-Select a column by the actual name from the .csv file using table[x=column 1,y=column 2…
+* Plotting is easy with pgfplots, it plots data directly from .csv files
+* Select a column by the actual name from the .csv file using table[x=column 1,y=column 2…
