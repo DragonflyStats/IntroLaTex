@@ -14,14 +14,14 @@ We have looked at many features of LaTeX so far and learned that many things are
 ### Creating a .bib file
 
 A .bib file will contain the bibliographic information of our document. I will only give a simple example, since there are many tools to generate the entries automatically. I will not explain the structure of the file itself, since i suggest using a bibtex generator (choose one from google). Our example will contain a single book and look like this:
-
+<pre><code>
 @BOOK{DUMMY:1,
 AUTHOR="John Doe",
 TITLE="The Book without Title",
 PUBLISHER="Dummy Publisher",
 YEAR="2100",
 }
-
+</code></pre>
 ### Using BibTeX
 
 After creating the bibtex file, we have to tell LaTeX where to find our bibliographic database. For BibTeX this is not much different from printing the table of contents. We just need the commands \bibliography which tells LaTeX the location of our .bib file and \bibliographystyle which selects one of various bibliographic styles.
@@ -52,11 +52,12 @@ Most editors will let you select, to run bibtex automatically on compilation. In
 Image
 
 If you use a different editor, it can be necessary to execute the bibtex command manually. In a command prompt/shell simply run:
-
+<pre><code>
 pdflatex lesson7a1.tex
 bibtex lesson7a1
 pdflatex lesson7a1.tex
 pdflatex lesson7a1.tex
+</code></pre>
 It is necessary to execute the pdflatex command, before the bibtex command, to tell bibtex what literature we cited in our paper. Afterwards the .bib file will be translated into the proper output for out references section. The next two steps merge the reference section with our LaTeX document and then assign successive numbers in the last step.
 
 Autogenerate footnotes in 
@@ -84,7 +85,7 @@ Random citation \autocite[1]{DUMMY:1} embeddeed in text.
 
 \end{document}
 </code></pre>
-The \autocite command generates the footnotes and we can enter a page number in the brackets \autocite[1]{DUMMY:1} will generate a footnote like this:
+The \autocite command generates the footnotes and we can enter a page number in the brackets ``\autocite[1]{DUMMY:1}`` will generate a footnote like this:
 
 Image
 
@@ -95,10 +96,10 @@ The backend=bibtex part makes sure to use BibTeX instead of Biber as our backend
 
 ## Summary
 
-Generate a bibliography with BibTeX and BibLaTeX
-First define a .bib file using: \bibliography{BIB_FILE_NAME} (do not add .bib)
-For BibTeX put the \bibliography statement in your document, for BibLaTeX in the preamble
-BibTeX uses the \bibliographystyle command to set the citation style
-BibLaTeX chooses the style as an option like: \usepackage[backend=bibtex, style=verbose-trad2]{biblatex}
-BibTeX uses the \cite command, while BibLaTeX uses the \autocite command
-The \autocite command takes the page number as an option: \autocite[NUM]{}
+* Generate a bibliography with BibTeX and BibLaTeX
+* First define a ``.bib`` file using: ``\bibliography{BIB_FILE_NAME}`` (do not add .bib)
+* For BibTeX put the \bibliography statement in your document, for BibLaTeX in the preamble
+* BibTeX uses the \bibliographystyle command to set the citation style
+* BibLaTeX chooses the style as an option like: ``\usepackage[backend=bibtex, style=verbose-trad2]{biblatex}``
+* BibTeX uses the \cite command, while BibLaTeX uses the \autocite command
+* The \autocite command takes the page number as an option: ``\autocite[NUM]{}``
