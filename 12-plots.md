@@ -118,7 +118,11 @@ Given a .csv file like:
 column 1,column 2
 1,2
 11.432,2342.23123123
-we have to put the name of one column for our x, in this case x=column 1 and a second column for our y, since there are only two columns, we choose y=column 2. Again, the col sep=comma indicates that we use comma as our column separator. We can copy the whole snippet as shown above and use it over and over again, we only have to change the columns we want to plot and the filename. There are a lot of options to style the plots and have bar charts and so forth. I will show a few more styles in a later tutorial or add an overview of snippets to the misc section.
+
+* We have to put the name of one column for our x, in this case x=column 1 and a second column for our y, since there are only two * columns, we choose y=column 2. 
+* Again, the col sep=comma indicates that we use comma as our column separator.
+* We can copy the whole snippet as shown above and use it over and over again, we only have to change the columns we want to plot and the filename. 
+* There are a lot of options to style the plots and have bar charts and so forth. I will show a few more styles in a later tutorial or add an overview of snippets to the misc section.
 
 ### Summary
 
