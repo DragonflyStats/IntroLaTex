@@ -3,9 +3,10 @@ List structures
 
 Lists often appear in documents, especially academic, as their purpose is often to present information in a clear and concise fashion. List structures in LaTeX are simply environments which essentially come in three types:
 
-itemize for a bullet list
-enumerate for an enumerated list and
-description for a descriptive list.
+1. itemize for a bullet list
+2. enumerate for an enumerated list and
+3. description for a descriptive list.
+
 All lists follow the basic format:
 <pre><code>
 \begin{list_type}  
@@ -52,7 +53,7 @@ LaTeX will happily allow you to insert a list environment into an existing one (
 \end{enumerate}
 </code></pre>
 
-### Some special lists[edit]
+### Some special lists
 Sometimes you feel the need to better align the different list items. If you are using a KOMA-script class (or package scrextend), the labeling environment is handy. It takes a mandatory argument that contains the longest of your labels.
 <pre><code>
 \documentclass[twocolumn]{article}
@@ -173,7 +174,9 @@ An example for alignment and the width of the label.
 \blindtext
 \end{document}
 </code></pre>
-The documentation of package enumitem goes into more detail with respect to what can be changed and how. You can even define your own lists. Environments like labeling and tasks can be changed differently, details can be found in the package documentation respectively.
+The documentation of package enumitem goes into more detail with respect to what can be changed and how. You can even define your own lists. 
+
+Environments like labeling and tasks can be changed differently, details can be found in the package documentation respectively.
 
 ### Easylist package
 The easylist package allows you to create list using a more convenient syntax and with infinite nested levels. It is also very customizable.
