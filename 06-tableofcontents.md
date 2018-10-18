@@ -1,11 +1,6 @@
 Generate a table of contents in LaTeX
 =======================================================
-LaTeX offers features to automatically generate a table of contents, a list of figures and a list of tables. Learn here how to use them.
-
-
-
- 
-[Open document online]
+LaTeX offers features to automatically generate a table of contents, a list of figures and a list of tables. 
 
 * Table of contents
 * List of figures
