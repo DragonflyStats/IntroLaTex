@@ -23,6 +23,7 @@ When using Linux or Mac, most packages will already be installed by default and 
 ### Purpose of packages
 
 There are countless packages, all for different purposes in my tutorials I will explain some of the most useful. To typeset math, LaTeX offers (among others) an environment called equation. Everything inside this environment will be printed in math mode, a special typesetting environment for math. LaTeX also takes care of equation numbers for us:
+
 <pre><code>
 \documentclass{article}
 
@@ -40,6 +41,7 @@ There are countless packages, all for different purposes in my tutorials I will 
 
 The automatic numbering is a useful feature, but sometimes it's necessary to remove them for auxiliary calculations. LaTeX doesn't allow this by default, now we want to include a package that does:
 
+<pre><code>
 \documentclass{article}
 
 \usepackage{amsmath}
@@ -49,6 +51,7 @@ The automatic numbering is a useful feature, but sometimes it's necessary to rem
 \begin{equation*}
   f(x) = x^2
 \end{equation*}
+</code></pre>
 Now we get the same output as before, only the equation number is removed: 
 f
 (
@@ -60,7 +63,7 @@ x
 f(x)=x2
 #### Summary
 
-Packages add new functions to LaTeX
-All packages must be included in the preamble
-Packages add features such as support for pictures, links and bibliography
+* Packages add new functions to LaTeX
+* All packages must be included in the preamble
+* Packages add features such as support for pictures, links and bibliography
 
