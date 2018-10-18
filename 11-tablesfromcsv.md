@@ -1,16 +1,11 @@
 Tables from .csv in LaTeX with pgfplotstable
 ======================================================================================
-Use the package pgfplotstable to read tables from .csv files automatically and add them to your document.
+Use the package ***pgfplotstable*** to read tables from .csv files automatically and add them to your document.
 
-
-
- 
-[Open document online]
-
-Syntax and usage of pgfplotstable
-Adding new columns
-Layout of a .csv file
-Syntax and usage of pgfplotstable
+* Syntax and usage of pgfplotstable
+* Adding new columns
+* Layout of a .csv file
+* Syntax and usage of pgfplotstable
 
 When writing papers, it is sometimes necessary to present a large amount of data in tables. Writing such tables in LaTeX by hand is a very time-consuming and error-prone task. To avoid this, we can simply import the data directly from .csv (comma-separated value) files. Programs such as Excel, OpenOffice Calc or even emacs org-mode can export data sheets as .csv files. LaTeX can not work with them directly, but we can use the following code, to generate tables from .csv files:
 <pre><code>
